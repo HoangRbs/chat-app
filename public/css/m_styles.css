@@ -1,0 +1,164 @@
+/* general style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label {
+    color: rgb(119, 117, 117);
+}
+
+input {
+    font-size: 14px;
+}
+
+input {
+    border: 1px solid #eeeeee;
+    padding: 12px;
+    outline: none;
+}
+
+body {
+    line-height: 1.4;
+    color: #333333;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px;
+    background: #7C5CBF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: background .5s ease;
+}
+
+button:hover {
+    background: #BE57F8;
+}
+
+button:disabled {
+    cursor: default;
+    background: #EA57F8;
+}
+
+/* page layout */
+.chat{
+    display: flex;
+}
+
+.chat__sidebar {
+    color: white;
+    background: #333744;
+    height: 100vh;
+    width: 30vw;
+    overflow-y: scroll;
+}
+
+
+.chat__main {    
+    /*background: blanchedalmond;*/
+    flex-grow: 1;
+    height: 100vh;
+}
+
+/* inside chat__main */
+.chat__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.messages-section {
+    /*background:  white;*/
+    padding: 24px 24px 0 24px;
+    flex-grow: 1;
+    overflow-y: scroll;
+}   
+
+.userInteractSection {
+    /*background: rgb(83, 80, 31);*/
+    padding: 24px;
+    display: flex;
+    margin-top: 10px;
+}
+
+.userInteractSection form{
+    flex-grow: 1;
+    margin-right: 16px;
+
+    display: flex;
+}
+
+.userInteractSection form input{
+    margin-right: 16px;
+    flex-grow: 1;
+}
+
+/*messages text*/
+
+.messages_name {
+    font-weight: 600;
+    margin-right: 3px;
+}
+
+.messages_time {
+    font-size: 14px;
+    color: rgb(131, 127, 127);
+}
+
+.aMessage{
+    margin-bottom: 15px;
+}
+
+/*join page styles*/
+
+.joinForm_background {
+    background: rgba(28, 16, 51, 0.781);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joinForm_box {
+    box-shadow: 0px 0px 17px 1px #1D1F26 ;
+    background: rgba(253, 252, 252, 0.945);
+    width: 40vw;
+    padding: 16px;
+}
+
+.joinForm_box form {
+    margin-top: 15px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.joinForm_box input{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*sidebar*/
+.room-title{
+    font-size: 24px;
+    font-weight: 400;
+    background: #2c2f3a;
+    padding: 24px;
+}
+
+.list-title{
+    font-weight: 530;
+    font-size: 18px;
+    padding: 12px 24px 4px 24px;
+}
+
+.userName{
+    font-weight: 300;
+    font-size: 17px;
+    padding: 5px 24px 4px 24px;
+}

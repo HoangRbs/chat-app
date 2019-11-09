@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Elmore Chat</title>
+    <link rel = "icon" href="img/favicon.png">
+    <link rel = "stylesheet" href ="css/m_styles.css">
+</head>
+<body>
+    <div class = "chat">
+        <div id = "sidebar" class="chat__sidebar">
+            <!--display room and users list-->
+        </div>
+
+        <div class = "chat__main">
+            <div id="messages-section" class = "messages-section"></div><!-- display messages -->
+            
+            <div class= "userInteractSection">
+                <form id = "message-form">
+                    <input name = "messageInput" placeholder="Message" required autocomplete="off"></input>
+                    <button>Send</button>
+                </form>
+                
+                <button id ="send-location">Send Location</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- templates -->
+    <script id="userMessageTemplate" type = "text/html">
+        <div class="aMessage">
+            <p>
+                <span class="messages_name">{{userName}}</span>
+                <span class="messages_time">{{createdAt}}</span>
+            </p>
+            <p>{{message}}</p>
+        </div>
+    </script>
+
+    <script id="userMessageLocationTmpl" type = "text/html">
+        <div class="aMessage">
+            <p>
+                <span class="messages_name">{{userName}}</span>
+                <span class="messages_time">{{createdAt}}</span>
+            </p>
+            <a href={{url}} target = "_blank">location</a>
+        </div>
+    </script>
+
+    <script id="sidebarTmpl" type = "text/html">
+        <div>
+            <h2 class="room-title">{{room}}</h2>
+            <h3 class="list-title">Users list:</h3>
+            <ul>
+                {{#usersList}}
+                    <li class="userName">{{userName}}</li>
+                {{/usersList}}
+            </ul>
+        </div>
+    </script>
+
+    <script src = "socket.io/socket.io.js"></script>
+    <script src = "js/mustache.min.js"></script>
+    <script src= "js/chat.js"></script>
+</body>
+</html>
